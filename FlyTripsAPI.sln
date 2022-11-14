@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyTripsAPI", "WebAPI\FlyTripsAPI.csproj", "{ADD95CFB-E2D5-4253-AD9E-AF4CA4CDF021}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADD95CFB-E2D5-4253-AD9E-AF4CA4CDF021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADD95CFB-E2D5-4253-AD9E-AF4CA4CDF021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADD95CFB-E2D5-4253-AD9E-AF4CA4CDF021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD95CFB-E2D5-4253-AD9E-AF4CA4CDF021}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {620CE133-0509-4B54-A244-619F4D51F7F5}
+	EndGlobalSection
+EndGlobal
