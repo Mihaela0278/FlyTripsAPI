@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FlyTrips.Entities
 {
@@ -12,13 +8,15 @@ namespace FlyTrips.Entities
 
         public string Seat { get; set; }
 
-        public TimeOnly Departure { get; set; }
+        public string Departure { get; set; }
 
         public string Destination { get; set; }
 
-        public DateOnly FlightDate { get; set; }
+        public DateTime FlightDateTime { get; set; }
 
-        public TimeOnly FlightTime { get; set; }
+        public User User { get; set; }
+
+        public ICollection<Airline> Airlines { get; set; }
 
     }
 }
