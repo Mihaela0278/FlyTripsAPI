@@ -1,13 +1,20 @@
 using FlyTrips.Entities;
+using FlyTrips.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// connect to database
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<FlyTripsDbContext>(options =>
     options.UseSqlServer(connectionString));
+
+// add automapper
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
+
+// add services
+builder.Services.AddScoped<IRoleService, RoleService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
