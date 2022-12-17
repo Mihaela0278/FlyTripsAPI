@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace FlyTrips.Entities
+﻿namespace FlyTrips.Entities
 {
     public class Ticket : BaseEntity
     {

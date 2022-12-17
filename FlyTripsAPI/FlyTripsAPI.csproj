@@ -30,7 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FlyTrips.DTO\FlyTrips.DTO.csproj" />
     <ProjectReference Include="..\FlyTrips.Entities\FlyTrips.Entities.csproj" />
+    <ProjectReference Include="..\FlyTrips.Services\FlyTrips.Services.csproj" />
   </ItemGroup>
 
 </Project>
