@@ -28,6 +28,16 @@ namespace FlyTrips.Entities
                 .HasIndex(a => a.Name)
                 .IsUnique();
 
+            // make Username unique
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Username)
+                .IsUnique();
+
+            // auto include Role when getting user
+            modelBuilder.Entity<User>()
+                .Navigation(u => u.Role)
+                .AutoInclude();
+
             base.OnModelCreating(modelBuilder);
         }
     }
