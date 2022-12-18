@@ -12,11 +12,11 @@ namespace FlyTrips.Services
 
         public RoleResponseDto Create(RoleCreateUpdateDto dto)
         {
-            Role role = mapper.Map<Role>(dto);
+            Role role = _mapper.Map<Role>(dto);
 
             Create(role);
 
-            return mapper.Map<RoleResponseDto>(role);
+            return _mapper.Map<RoleResponseDto>(role);
         }
 
         public void Delete(int id)
@@ -30,21 +30,21 @@ namespace FlyTrips.Services
         {
             Role role = base.GetById(id);
 
-            mapper.Map(dto, role);
+            _mapper.Map(dto, role);
 
             Update(role);
 
-            return mapper.Map<RoleResponseDto>(role);
+            return _mapper.Map<RoleResponseDto>(role);
         }
 
         public new IEnumerable<RoleResponseDto> GetAll()
         {
-            return base.GetAll().Select(mapper.Map<RoleResponseDto>);
+            return base.GetAll().Select(_mapper.Map<RoleResponseDto>);
         }
 
         public new RoleResponseDto GetById(int id)
         {
-            return mapper.Map<RoleResponseDto>(base.GetById(id));
+            return _mapper.Map<RoleResponseDto>(base.GetById(id));
         }
     }
 }

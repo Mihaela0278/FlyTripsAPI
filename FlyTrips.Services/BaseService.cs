@@ -6,41 +6,41 @@ namespace FlyTrips.Services
 {
     public class BaseService<T> : IBaseService<T> where T : BaseEntity
     {
-        protected readonly FlyTripsDbContext context;
-        protected readonly IMapper mapper;
+        protected readonly FlyTripsDbContext _context;
+        protected readonly IMapper _mapper;
 
         public BaseService(FlyTripsDbContext context, IMapper mapper)
         {
-            this.context = context;
-            this.mapper = mapper;
+            _context = context;
+            _mapper = mapper;
         }
 
         public void Create(T entity)
         {
-            context.Set<T>().Add(entity);
-            context.SaveChanges();
+            _context.Set<T>().Add(entity);
+            _context.SaveChanges();
         }
 
         public void Delete(T entity)
         {
-            context.Set<T>().Remove(entity);
-            context.SaveChanges();
+            _context.Set<T>().Remove(entity);
+            _context.SaveChanges();
         }
 
         public IEnumerable<T> GetAll()
         {
-            return context.Set<T>().ToList();
+            return _context.Set<T>().ToList();
         }
 
         public T GetById(int id)
         {
-            return context.Set<T>().Find(id);
+            return _context.Set<T>().Find(id);
         }
 
         public void Update(T entity)
         {
-            context.Entry(entity).State = EntityState.Modified;
-            context.SaveChanges();
+            _context.Entry(entity).State = EntityState.Modified;
+            _context.SaveChanges();
         }
     }
 }
