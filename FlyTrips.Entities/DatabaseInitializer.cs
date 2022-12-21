@@ -36,6 +36,7 @@
                 Role = context.Roles.First(r => r.Name == "Admin"),
                 Password = BCrypt.Net.BCrypt.HashPassword("Admin123")
             });
+            context.SaveChanges();
         }
     }
 }

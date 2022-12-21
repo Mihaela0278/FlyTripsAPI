@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FlyTrips.DTO.Airline;
 using FlyTrips.DTO.Auth;
 using FlyTrips.DTO.Role;
 using FlyTrips.Entities;
@@ -14,6 +15,9 @@ namespace FlyTrips.Services
 
             CreateMap<User, RegisterResponse>();
             CreateMap<RegisterDto, User>();
+
+            CreateMap<AirlineCreateUpdateDto, Airline>();
+            CreateMap<Airline, AirlineResponseDto>();
         }
     }
 }
