@@ -46,7 +46,7 @@ namespace FlyTripsAPI.Controllers
 
         [HttpGet("{id}")]
         [Authorize]
-        public IActionResult Get([FromRoute] int id)
+        public IActionResult GetById([FromRoute] int id)
         {
             return Ok(_airlineService.GetById(id));
         }

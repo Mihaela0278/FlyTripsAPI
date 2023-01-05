@@ -24,15 +24,13 @@ namespace FlyTripsAPI.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous]
         public IActionResult Get()
         {
             return Ok(_ticketService.GetAll());
         }
 
         [HttpGet("{id}")]
-        [AllowAnonymous]
-        public IActionResult Get([FromRoute] int id)
+        public IActionResult GetById([FromRoute] int id)
         {
             return Ok(_ticketService.GetById(id));
         }
