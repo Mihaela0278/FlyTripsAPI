@@ -42,5 +42,10 @@ namespace FlyTrips.Services
             _context.Entry(entity).State = EntityState.Modified;
             _context.SaveChanges();
         }
+
+        public int GetCount()
+        {
+            return _context.Set<T>().Count();
+        }
     }
 }

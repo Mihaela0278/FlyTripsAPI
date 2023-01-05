@@ -13,5 +13,7 @@ namespace FlyTrips.Services
         void Update(T entity);
 
         void Delete(T entity);
+
+        int GetCount();
     }
 }

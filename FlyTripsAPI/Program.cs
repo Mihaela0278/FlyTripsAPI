@@ -1,3 +1,5 @@
+using DinkToPdf.Contracts;
+using DinkToPdf;
 using FlyTrips.Entities;
 using FlyTrips.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -23,6 +25,9 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAirlineService, AirlineService>();
 builder.Services.AddScoped<ITicketService, TicketService>();
+
+builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+builder.Services.AddScoped<IPdfReport, PdfReport>();
 
 //Add security to Swagger
 builder.Services.AddSwaggerGen(options =>
