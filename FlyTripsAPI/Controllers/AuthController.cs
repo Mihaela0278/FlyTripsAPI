@@ -1,6 +1,5 @@
 ﻿using FlyTrips.DTO.Auth;
 using FlyTrips.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FlyTripsAPI.Controllers

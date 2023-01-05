@@ -22,6 +22,7 @@ builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAirlineService, AirlineService>();
+builder.Services.AddScoped<ITicketService, TicketService>();
 
 //Add security to Swagger
 builder.Services.AddSwaggerGen(options =>

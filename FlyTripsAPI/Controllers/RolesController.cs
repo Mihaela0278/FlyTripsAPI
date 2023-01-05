@@ -10,41 +10,41 @@ namespace FlyTripsAPI.Controllers
     [Authorize(Roles = "Admin")]
     public class RolesController : ControllerBase
     {
-        private readonly IRoleService roleService;
+        private readonly IRoleService _roleService;
 
         public RolesController(IRoleService roleService)
         {
-            this.roleService = roleService;
+            _roleService = roleService;
         }
 
         [HttpPost]
         public IActionResult Create([FromBody] RoleCreateUpdateDto dto)
         {
-            return Ok(roleService.Create(dto));
+            return Ok(_roleService.Create(dto));
         }
 
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok(roleService.GetAll());
+            return Ok(_roleService.GetAll());
         }
 
         [HttpGet("{id}")]
         public IActionResult Get([FromRoute] int id)
         {
-            return Ok(roleService.GetById(id));
+            return Ok(_roleService.GetById(id));
         }
 
         [HttpPut("{id}")]
         public IActionResult Update([FromBody] RoleCreateUpdateDto dto, [FromRoute] int id)
         {
-            return Ok(roleService.Update(dto, id));
+            return Ok(_roleService.Update(dto, id));
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete([FromRoute] int id)
         {
-            roleService.Delete(id);
+            _roleService.Delete(id);
             return NoContent();
         }
     }
