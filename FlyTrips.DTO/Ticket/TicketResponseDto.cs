@@ -1,6 +1,9 @@
-﻿namespace FlyTrips.Entities
+﻿using FlyTrips.DTO.Airline;
+using FlyTrips.DTO.Auth;
+
+namespace FlyTrips.DTO.Ticket
 {
-    public class Ticket : BaseEntity
+    public class TicketResponseDto
     {
         public decimal Price { get; set; }
 
@@ -12,9 +15,9 @@
 
         public DateTime FlightDateTime { get; set; }
 
-        public User User { get; set; }
+        public RegisterResponse User { get; set; }
 
-        public ISet<Airline> Airlines { get; set; }
+        public ICollection<AirlineResponseDto> Airlines { get; set; }
 
     }
 }

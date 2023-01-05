@@ -38,6 +38,14 @@ namespace FlyTrips.Entities
                 .Navigation(u => u.Role)
                 .AutoInclude();
 
+            modelBuilder.Entity<Ticket>()
+                .Navigation(t => t.User)
+                .AutoInclude();
+
+            modelBuilder.Entity<Ticket>()
+                .Navigation(t => t.Airlines)
+                .AutoInclude();
+
             base.OnModelCreating(modelBuilder);
         }
     }

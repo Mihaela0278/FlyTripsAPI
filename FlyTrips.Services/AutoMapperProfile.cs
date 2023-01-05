@@ -2,6 +2,7 @@
 using FlyTrips.DTO.Airline;
 using FlyTrips.DTO.Auth;
 using FlyTrips.DTO.Role;
+using FlyTrips.DTO.Ticket;
 using FlyTrips.Entities;
 
 namespace FlyTrips.Services
@@ -18,6 +19,9 @@ namespace FlyTrips.Services
 
             CreateMap<AirlineCreateUpdateDto, Airline>();
             CreateMap<Airline, AirlineResponseDto>();
+
+            CreateMap<TicketCreateUpdateDto, Ticket>();
+            CreateMap<Ticket, TicketResponseDto>();
         }
     }
 }
