@@ -87,6 +87,7 @@ using (var scope = app.Services.CreateScope())
     var context = scope.ServiceProvider.GetRequiredService<FlyTripsDbContext>();
     DatabaseInitializer.SeedRolesInDb(context);
     DatabaseInitializer.SeedAdminInDb(context);
+    DatabaseInitializer.SeedAirlines(context);
 }
 
 // Configure the HTTP request pipeline.

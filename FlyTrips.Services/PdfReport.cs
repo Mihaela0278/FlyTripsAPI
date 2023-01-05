@@ -63,7 +63,7 @@ $@"<html>
         <style>
             .header {{
                 text-align: center;
-                color: green;
+                color: black;
                 padding-bottom: 35px;
             }}
 
@@ -81,8 +81,8 @@ $@"<html>
             }}
 
             table th {{
-                background-color: green;
-                color: white;
+                background-color: #eaadec;
+                color: black;
             }}
         </style>
     </head>
