@@ -8,10 +8,10 @@ namespace FlyTrips.Entities
     {
         public static void SeedAirlines(FlyTripsDbContext context)
         {
-            //if (context.Airlines.Any())
-            //{
-            //    return;
-            //}
+            if (context.Airlines.Any())
+            {
+                return;
+            }
 
             using var reader = new StreamReader("airlines.csv");
             using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);

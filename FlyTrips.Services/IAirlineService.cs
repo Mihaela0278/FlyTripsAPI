@@ -9,7 +9,7 @@ namespace FlyTrips.Services
 
         new AirlineResponseDto GetById(int id);
 
-        new IEnumerable<AirlineResponseDto> GetAll();
+        new IEnumerable<AirlineResponseDto> GetAll(int n);
 
         IEnumerable<AirlineResponseDto> GetAirlinesByName(string name);
 

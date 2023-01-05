@@ -25,9 +25,9 @@ namespace FlyTripsAPI.Controllers
 
         [HttpGet]
         [Authorize]
-        public IActionResult GetAll()
+        public IActionResult GetAll([FromForm] int n)
         {
-            return Ok(_airlineService.GetAll());
+            return Ok(_airlineService.GetAll(n));
         }
 
         [HttpGet("getByName")]

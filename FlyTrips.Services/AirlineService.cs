@@ -48,9 +48,9 @@ namespace FlyTrips.Services
             return _mapper.Map<AirlineResponseDto>(airline);
         }
 
-        public new IEnumerable<AirlineResponseDto> GetAll()
+        public new IEnumerable<AirlineResponseDto> GetAll(int n)
         {
-            return base.GetAll().Select(_mapper.Map<AirlineResponseDto>);
+            return base.GetAll().Take(n).Select(_mapper.Map<AirlineResponseDto>);
         }
 
         public IEnumerable<AirlineResponseDto> GetAirlinesByName(string name)
