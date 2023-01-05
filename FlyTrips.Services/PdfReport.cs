@@ -1,13 +1,5 @@
 ﻿using DinkToPdf;
 using DinkToPdf.Contracts;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Numerics;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FlyTrips.Services
 {

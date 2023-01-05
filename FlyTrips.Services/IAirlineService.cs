@@ -11,6 +11,10 @@ namespace FlyTrips.Services
 
         new IEnumerable<AirlineResponseDto> GetAll();
 
+        IEnumerable<AirlineResponseDto> GetAirlinesByName(string name);
+
+        IEnumerable<AirlineResponseDto> GetAirlinesByCountryName(string countryName);
+
         AirlineResponseDto Update(int id, AirlineCreateUpdateDto dto);
 
         void Delete(int id);

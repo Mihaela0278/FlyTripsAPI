@@ -30,6 +30,20 @@ namespace FlyTripsAPI.Controllers
             return Ok(_airlineService.GetAll());
         }
 
+        [HttpGet("getByName")]
+        [Authorize]
+        public IActionResult GetByName([FromQuery] string name)
+        {
+            return Ok(_airlineService.GetAirlinesByName(name));
+        }
+
+        [HttpGet("getByCountry")]
+        [Authorize]
+        public IActionResult GetByCountry([FromHeader] string countryName)
+        {
+            return Ok(_airlineService.GetAirlinesByCountryName(countryName));
+        }
+
         [HttpGet("{id}")]
         [Authorize]
         public IActionResult Get([FromRoute] int id)

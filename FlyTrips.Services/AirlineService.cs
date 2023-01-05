@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FlyTrips.DTO.Airline;
 using FlyTrips.Entities;
+using System.Xml.Linq;
 
 namespace FlyTrips.Services
 {
@@ -50,6 +51,16 @@ namespace FlyTrips.Services
         public new IEnumerable<AirlineResponseDto> GetAll()
         {
             return base.GetAll().Select(_mapper.Map<AirlineResponseDto>);
+        }
+
+        public IEnumerable<AirlineResponseDto> GetAirlinesByName(string name)
+        {
+            return _context.Airlines.Where(a => a.Name == name).Select(_mapper.Map<AirlineResponseDto>);
+        }
+
+        public IEnumerable<AirlineResponseDto> GetAirlinesByCountryName(string countryName)
+        {
+            return _context.Airlines.Where(a => a.Country == countryName).Select(_mapper.Map<AirlineResponseDto>);
         }
 
         public new AirlineResponseDto GetById(int id)
