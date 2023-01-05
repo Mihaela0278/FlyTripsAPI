@@ -56,5 +56,10 @@ namespace FlyTrips.Services
         {
             return _mapper.Map<AirlineResponseDto>(base.GetById(id));
         }
+
+        public Airline GetEntityById(int id)
+        {
+            return base.GetById(id);
+        }
     }
 }

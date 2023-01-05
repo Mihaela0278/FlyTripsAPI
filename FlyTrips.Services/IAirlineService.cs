@@ -14,5 +14,7 @@ namespace FlyTrips.Services
         AirlineResponseDto Update(int id, AirlineCreateUpdateDto dto);
 
         void Delete(int id);
+
+        Airline GetEntityById(int id);
     }
 }
