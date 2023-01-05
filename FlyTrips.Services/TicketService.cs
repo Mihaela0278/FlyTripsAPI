@@ -20,7 +20,7 @@ namespace FlyTrips.Services
         {
             Ticket ticket = _mapper.Map<Ticket>(dto);
 
-            User user = _userService.GetById(dto.UserId);
+            User user = _userService.GetEntityById(dto.UserId);
             ticket.User = user;
 
             ticket.Airlines = SetTicketAirlines(dto.AirlineIds);
@@ -48,7 +48,7 @@ namespace FlyTrips.Services
 
             _mapper.Map(dto, ticket);
 
-            User user = _userService.GetById(dto.UserId);
+            User user = _userService.GetEntityById(dto.UserId);
             ticket.User = user;
             ticket.Airlines = SetTicketAirlines(dto.AirlineIds);
 
